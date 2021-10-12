@@ -11,8 +11,8 @@ import {
 
 import {Home} from './Home' 
 import {Output} from './Output' 
-import {newPassword} from './Password' 
-import {dataInput} from './DataInput' 
+import {NewPassword} from './Password' 
+import {DataInput} from './DataInput' 
 import {Login} from './Login'
 import {Registr} from './Registr' 
 
@@ -24,8 +24,8 @@ function App() {
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/output" component={Output} />
-      <Route path="/password" component={newPassword} />
-      <Route path="/datainput" component={dataInput} />
+      <Route path="/password" component={NewPassword} />
+      <Route path="/datainput" component={DataInput} />
       <Route path="/login" component={Login} />
       <Route path="/reg" component={Registr} />
     </Switch>

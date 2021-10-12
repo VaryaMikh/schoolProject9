@@ -1,8 +1,8 @@
 import { React } from 'react';
 
-import { Button, Card, Container, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Card, Container } from 'react-bootstrap';
 import styled from 'styled-components';
+import FormReg from './FormReg';
 
 const Styles = styled.div `
     a, .navbar-brand, .navbar-nav, .nav-link {
@@ -22,7 +22,8 @@ export const Registr = () => (
                         <Card.Text>
                             Вам необходимо зарегистрироваться для входа в систему медицинских услуг.
                         </Card.Text>
-                        <Form>
+                        <FormReg />
+                        {/* <Form>
                             <Form.Group controlId="fromBasicEmail">
                                 <Form.Control type="email" placeholder="Email"/>
                                 <Form.Text className="text-muted">Мы никогда не будем делиться вашей личной информацией.</Form.Text>
@@ -37,7 +38,7 @@ export const Registr = () => (
                                 <Link to="/datainput"><Button variant="danger">Зарегистрироваться</Button></Link>
                                 <Link to="/login"><Button variant="danger">Войти</Button></Link>
                             </Form.Group>
-                        </Form>
+                        </Form> */}
                     </Card.Body>
                 </Card>
             </Container>

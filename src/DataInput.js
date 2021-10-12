@@ -1,6 +1,6 @@
 import { React } from 'react';
 
-import { Button, Card, Container, Form } from 'react-bootstrap';
+import { Button, Card, Container, Form, Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -13,7 +13,7 @@ const Styles = styled.div `
     }
 `
 
-export const dataInput = () => (
+export const DataInput = () => (
     <>
         <Styles style={{backgroundColor: '#e8e8e8'}}>
             <Container style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
@@ -30,10 +30,22 @@ export const dataInput = () => (
                             <Form.Group controlId="fromBasicСondition" style={{marginTop: '2%'}}>
                                 <Form.Control type="condition" placeholder="Общее состояние"/>
                             </Form.Group>
+                            <Dropdown style={{marginTop: '2%'}}>
+                                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                    Ваша температура
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">36</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">37</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">38</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown> 
                             <Form.Group controlId="fromBasicCheckBox" style={{marginTop: '4%', display: 'flex', justifyСontent: 'space-between'}}>
                                 <Link to="/output"><Button variant="secondary">Отправить</Button></Link>
                             </Form.Group>
                         </Form>
+                
                     </Card.Body>
                 </Card>
             </Container>

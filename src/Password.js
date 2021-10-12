@@ -13,7 +13,7 @@ const Styles = styled.div `
     }
 `
 
-export const newPassword = () => (
+export const NewPassword = () => (
     <>
         <Styles style={{backgroundColor: '#daffdf'}}>
             <Container style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

@@ -22,20 +22,7 @@ export const Login = () => (
                         <Card.Text>
                             Вам необходимо войти для входа в систему медицинских услуг.
                         </Card.Text>
-                        {/* <Form> */}
-                            <FormLogin />
-                            {/* <Form.Group controlId="fromBasicEmail">
-                                <Form.Control type="email" placeholder="Email"/>
-                            </Form.Group>
-                            <Form.Group controlId="fromBasicPassward" style={{marginTop: '2%'}}>
-                                <Form.Control type="passward" placeholder="Пароль"/>
-                            </Form.Group> */}
-                            {/* <Form.Group controlId="fromBasicCheckBox" style={{marginTop: '4%', display: 'flex', justifyСontent: 'space-between'}}>
-                                <Link to="/datainput"><Button variant="warning">Войти</Button></Link>
-                                <Link to="/reg"><Button variant="warning">Зарегистрироваться</Button></Link>
-                                <Button variant="link"><Link to="/password">Забыли пароль?</Link></Button>
-                            </Form.Group> */}
-                        {/* </Form> */}
+                        <FormLogin />
                     </Card.Body>
                 </Card>
             </Container>

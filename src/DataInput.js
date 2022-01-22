@@ -4,6 +4,7 @@ import { Button, Card, Container, Form, Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+
 const Styles = styled.div `
     a, .navbar-brand, .navbar-nav, .nav-link {
         color: #adb1b8;
@@ -23,6 +24,7 @@ export const DataInput = () => (
                         <Card.Text>
                             Введите данные о вашем самочувствии в следующих полях:
                         </Card.Text>
+                        
                         <Form>
                             <Form.Group controlId="fromBasicTemperature">
                                 <Form.Control type="temperature" placeholder="Темература"/>
@@ -30,17 +32,6 @@ export const DataInput = () => (
                             <Form.Group controlId="fromBasicСondition" style={{marginTop: '2%'}}>
                                 <Form.Control type="condition" placeholder="Общее состояние"/>
                             </Form.Group>
-                            <Dropdown style={{marginTop: '2%'}}>
-                                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                    Ваша температура
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item href="#/action-1">36</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">37</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">38</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown> 
                             <Form.Group controlId="fromBasicCheckBox" style={{marginTop: '4%', display: 'flex', justifyСontent: 'space-between'}}>
                                 <Link to="/output"><Button variant="secondary">Отправить</Button></Link>
                             </Form.Group>

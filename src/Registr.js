@@ -23,22 +23,6 @@ export const Registr = () => (
                             Вам необходимо зарегистрироваться для входа в систему медицинских услуг.
                         </Card.Text>
                         <FormReg />
-                        {/* <Form>
-                            <Form.Group controlId="fromBasicEmail">
-                                <Form.Control type="email" placeholder="Email"/>
-                                <Form.Text className="text-muted">Мы никогда не будем делиться вашей личной информацией.</Form.Text>
-                            </Form.Group>
-                            <Form.Group controlId="fromBasicPassward" style={{marginTop: '2%'}}>
-                                <Form.Control type="passward" placeholder="Пароль"/>
-                            </Form.Group>
-                            <Form.Group controlId="fromBasicPassward" style={{marginTop: '2%'}}>
-                                <Form.Control type="passward" placeholder="Повторите пароль"/>
-                            </Form.Group>
-                            <Form.Group controlId="fromBasicCheckBox" style={{marginTop: '4%', display: 'flex', justifyСontent: 'space-between'}}>
-                                <Link to="/datainput"><Button variant="danger">Зарегистрироваться</Button></Link>
-                                <Link to="/login"><Button variant="danger">Войти</Button></Link>
-                            </Form.Group>
-                        </Form> */}
                     </Card.Body>
                 </Card>
             </Container>

@@ -20,9 +20,11 @@ class FormReg extends Component {
     this.state = {
       email: '',
       password: '',
-      formErrors: {email: '', password: ''},
+      repeatpassword: '',
+      formErrors: {email: '', password: '', repeatpassword: ''},
       emailValid: false,
       passwordValid: false,
+      repeatpasswordValid: false,
       formValid: false
     }
   }
@@ -38,6 +40,7 @@ class FormReg extends Component {
     let fieldValidationErrors = this.state.formErrors;
     let emailValid = this.state.emailValid;
     let passwordValid = this.state.passwordValid;
+    let repeatpasswordValid = this.state.passwordValid;
 
     switch(fieldName) {
       case 'email':
@@ -48,17 +51,22 @@ class FormReg extends Component {
         passwordValid = value.length >= 6;
         fieldValidationErrors.password = passwordValid ? '': ' is too short';
         break;
+      case 'repeatpassword':
+          repeatpasswordValid = value = passwordValid;
+          fieldValidationErrors.repeatpassword = repeatpasswordValid ? '': ' password mismatch';
+        break;
       default:
         break;
     }
     this.setState({formErrors: fieldValidationErrors,
                     emailValid: emailValid,
-                    passwordValid: passwordValid
+                    passwordValid: passwordValid,
+                    repeatpasswordValid: repeatpasswordValid
                   }, this.validateForm);
   }
 
   validateForm() {
-    this.setState({formValid: this.state.emailValid && this.state.passwordValid});
+    this.setState({formValid: this.state.emailValid && this.state.passwordValid && this.state.repeatpasswordValid});
   }
 
   errorClass(error) {
@@ -86,7 +94,16 @@ class FormReg extends Component {
                         value={this.state.password}
                         onChange={this.handleUserInput}  />
                 </div>
-                <Link to="/datainput"><Button variant="primary">Продолжить</Button></Link>
+                <div className={`form-group ${this.errorClass(this.state.formErrors.repeatpassword)}`}>
+                    <label htmlFor="repeatpassword">Repeat password</label>
+                    <input type="password" className="form-control" name="repeatpassword"
+                        placeholder="Password"
+                        value={this.state.repeatpassword}
+                        onChange={this.handleUserInput}  />
+                </div>
+                {this.state.formValid ? 
+                  <Link to="/datainput"><Button variant="primary">Продолжить</Button></Link> : 
+                  <Button variant="danger">Продолжить</Button>}
                 <Link to="/login"><Button variant="primary">Войти</Button></Link>
             </form>
         </Styles>
@@ -94,4 +111,4 @@ class FormReg extends Component {
   }
 }
 
-export default FormReg;
+export default FormReg; 

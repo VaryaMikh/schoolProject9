@@ -89,13 +89,12 @@ class FormLogin extends Component {
                 {this.state.formValid ? 
                   <Link to="/datainput"><Button variant="primary">Продолжить</Button></Link> : 
                   <Button variant="danger">Продолжить</Button>}
-                {/* <Link to="/datainput" onClick={ (event) => event.preventDefault() } hidden={!this.state.formValid}><Button variant="primary" disabled={!this.state.formValid}>Продолжить</Button></Link> */}
-                {/* <Link to="/reg"><Button variant="primary">Зарегистрироваться</Button></Link> */}
-                {/* <Link to="/password"><Button variant="primary">Забыли пароль?</Button></Link> */}
+                <Link to="/reg"><Button variant="primary">Зарегистрироваться</Button></Link>
+                <Link to="/password"><Button variant="primary">Забыли пароль?</Button></Link>
             </form>
         </Styles>
     )
   }
 }
 
-export default FormLogin;
+export default FormLogin; 

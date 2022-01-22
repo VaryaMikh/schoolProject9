@@ -16,10 +16,7 @@ import {Output} from './Output'
 import {NewPassword} from './Password' 
 import {DataInput} from './DataInput' 
 import {Login} from './Login'
-import {Registr} from './Registr' 
-
-const userState = { authenticated: false, email:'' };
-const { useGlobalState } = createGlobalState(userState);
+import {Registr} from './Registr'
 
 function App() {
   return (

@@ -4,6 +4,7 @@ import { FormErrors } from './FormErrors';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import {useGlobalState, getGlobalState} from "./state";
 
 const Styles = styled.div `
     a, .navbar-brand, .navbar-nav, .nav-link {

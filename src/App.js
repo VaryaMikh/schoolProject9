@@ -2,6 +2,8 @@ import React from 'react';
 // import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import NaviBar from './components/Navibar';
+import { createGlobalState } from 'react-hooks-global-state';
+
 
 import { 
   BrowserRouter as Router,
@@ -15,6 +17,9 @@ import {NewPassword} from './Password'
 import {DataInput} from './DataInput' 
 import {Login} from './Login'
 import {Registr} from './Registr' 
+
+const userState = { authenticated: false, email:'' };
+const { useGlobalState } = createGlobalState(userState);
 
 function App() {
   return (

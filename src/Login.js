@@ -20,9 +20,9 @@ export const Login = () => (
                     <Card.Body>
                         <Card.Title>Страница входа</Card.Title>
                         <Card.Text>
-                            Вам необходимо войти для входа в систему медицинских услуг.
+                            Вам необходимо указать email адресс и пароль, нажать кнопку войти для входа в систему мониторинга состояния.
                         </Card.Text>
-                        <FormLogin />
+                        <FormLogin /> 
                     </Card.Body>
                 </Card>
             </Container>

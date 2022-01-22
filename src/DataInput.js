@@ -3,6 +3,7 @@ import { React } from 'react';
 import { Button, Card, Container, Form, Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import FormData from './FormData';
 
 
 const Styles = styled.div `
@@ -25,21 +26,10 @@ export const DataInput = () => (
                             Введите данные о вашем самочувствии в следующих полях:
                         </Card.Text>
                         
-                        <Form>
-                            <Form.Group controlId="fromBasicTemperature">
-                                <Form.Control type="temperature" placeholder="Темература"/>
-                            </Form.Group>
-                            <Form.Group controlId="fromBasicСondition" style={{marginTop: '2%'}}>
-                                <Form.Control type="condition" placeholder="Общее состояние"/>
-                            </Form.Group>
-                            <Form.Group controlId="fromBasicCheckBox" style={{marginTop: '4%', display: 'flex', justifyСontent: 'space-between'}}>
-                                <Link to="/output"><Button variant="secondary">Отправить</Button></Link>
-                            </Form.Group>
-                        </Form>
-                
+                        <FormData />
                     </Card.Body>
                 </Card>
             </Container>
         </Styles>
     </>
-)
+)            

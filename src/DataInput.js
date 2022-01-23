@@ -18,8 +18,8 @@ const Styles = styled.div `
 
 export const DataInput = () => (
     <>
-        <Styles style={{backgroundColor: '#e8e8e8'}}>
-            <Container style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+        <Styles style={{color: '#515151'}}>
+            <Container style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh', borderBottom: 'solid'}}>
                 <Card>
                     <Card.Body>
                         <Card.Title>Страница ввода медицинских данных</Card.Title>

@@ -15,15 +15,15 @@ const Styles = styled.div `
 
 export const Home = () => (
     <>
-        <Styles style={{backgroundColor: '#dafcff'}}>
-            <Container style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+        <Styles style={{backgroundColor: '#f8f6f8'}}>
+            <Container style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh', color: '#515151'}}>
                 <Card>
                     <Card.Body>
                         <Card.Title style={{textAlign: 'center', fontSize: '50px'}}>Здравствуйте</Card.Title>
                         <Card.Text>
-                            Мы рады приветствовать вас в нашей клинике. Аутентифицируйтесь для продолжения работы на сайте.
+                            Мы рады приветствовать вас в нашей клинике. Войдите для продолжения работы на сайте.
                         </Card.Text>
-                        <Link to="/login"><Button variant="primary">Продолжить</Button></Link>
+                        <Link to="/login"><Button style={{backgroundColor: '#6c537a', borderColor: '#6c537a'}}>Продолжить</Button></Link>
                     </Card.Body>
                 </Card>
             </Container>

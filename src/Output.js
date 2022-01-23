@@ -14,18 +14,20 @@ const Styles = styled.div `
 `
 export const Output = () => (
     <>
-        <Styles style={{backgroundColor: '#ffc5ed'}}>
-            <Container style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+        <Styles style={{color: '#515151'}}>
+            <Container style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh'}}>
                 <Card>
                     <Card.Body>
                         <Card.Title>Результаты отправлены</Card.Title>
                         <Card.Text>
-                            Спасибо, что воспользовались нашим сервисом оказания медицинских услуг.
+                            Спасибо за предоставленные данные. Они помогут лечащему врачу назначить верный курс лечения.
+                        </Card.Text>
+                        <Card.Text>
                             Будем ждать вас снова.
                         </Card.Text>
                         <Form>
                             <Form.Group controlId="fromBasicCheckBox" style={{marginTop: '4%', display: 'flex', justifyСontent: 'space-between'}}>
-                                <Link to="/"><Button variant="danger">Отправить данные снова</Button></Link>
+                                <Link to="/"><Button style={{backgroundColor: '#6c537a', borderColor: '#6c537a'}}>Отправить данные снова</Button></Link>
                             </Form.Group>
                         </Form>
                     </Card.Body>

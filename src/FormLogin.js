@@ -89,25 +89,23 @@ function FormLogin(props) {
               <div className="panel panel-default">
                   <FormErrors formErrors={formErrors} />
               </div>
-              <div className={'form-group ${errorClass(formErrors.email)}'}>
-                  <label htmlFor="email">Email</label>
+              <div className={'form-group ${errorClass(formErrors.email)}'} style={{marginBottom: '2%'}}>
                   <input type="email" required className="form-control" name="email"
                          placeholder="Email"
                          value={email}
                          onChange={handleEmailInput}  />
               </div>
-              <div className={'form-group ${errorClass(formErrors.password)}'}>
-                  <label htmlFor="password">Пароль</label>
+              <div className={'form-group ${errorClass(formErrors.password)}'} style={{marginBottom: '2%'}}>
                   <input type="password" className="form-control" name="password"
                          placeholder="Пароль"
                          value={password}
                          onChange={handlePasswordInput}  />
               </div>
               {formValid ?
-                  <Button variant="primary" onClick={handleLogin}>Войти</Button>:
-                  <Button variant="danger">Войти</Button>}
-              <Link to="/reg"><Button variant="primary">Зарегистрироваться</Button></Link>
-              <Link to="/password"><Button variant="primary">Забыли пароль?</Button></Link>
+                  <Button onClick={handleLogin} style={{backgroundColor: '#33cc33', borderColor: '#33cc33'}}>Войти</Button>:
+                  <Button style={{backgroundColor: '#ff0000', borderColor: '#ff0000'}}>Войти</Button>}
+              <Link to="/reg"><Button style={{backgroundColor: '#6c537a', borderColor: '#6c537a', marginLeft: '1%'}}>Зарегистрироваться</Button></Link>
+              <Link to="/password"><Button style={{backgroundColor: '#6c537a', borderColor: '#6c537a', marginLeft: '1%'}}>Забыли пароль?</Button></Link>
           </form>
       </Styles>
   );

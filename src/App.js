@@ -1,7 +1,8 @@
 import React from 'react';
 // import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import NaviBar from './components/Navibar';
+import NaviBar from './components/Navibar';
+import Footer from './components/Footer';
 import { createGlobalState } from 'react-hooks-global-state';
 
 
@@ -22,7 +23,7 @@ function App() {
   return (
     <>
     <Router>
-    {/* <NaviBar /> */}
+    <NaviBar />
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/output" component={Output} />
@@ -31,6 +32,7 @@ function App() {
       <Route path="/login" component={Login} />
       <Route path="/reg" component={Registr} />
     </Switch>
+    <Footer />
     </Router>
     </>
   );

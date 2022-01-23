@@ -72,8 +72,8 @@ class FormPass extends Component {
                         onChange={this.handleUserInput}  />
                 </div>
                 {this.state.formValid ? 
-                  <Link to="/"><Button variant="primary">Отправить</Button></Link> : 
-                  <Button variant="danger">Отправить</Button>}
+                  <Link to="/"><Button style={{backgroundColor: '#33cc33', borderColor: '#33cc33'}}>Отправить</Button></Link> : 
+                  <Button style={{backgroundColor: '#ff0000', borderColor: '#ff0000'}}>Отправить</Button>}
                 <Button variant="link"><Link to="/login">Вернуться назад</Link></Button>
             </form>
         </Styles>

@@ -14,8 +14,8 @@ const Styles = styled.div `
 `
 export const Login = () => (
     <>
-        <Styles style={{backgroundColor: '#f9ffda'}}>
-            <Container style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+        <Styles style={{color: '#515151'}}>
+            <Container style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh'}}>
                 <Card>
                     <Card.Body>
                         <Card.Title>Страница входа</Card.Title>

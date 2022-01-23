@@ -16,8 +16,8 @@ const Styles = styled.div `
 
 export const NewPassword = () => (
     <>
-        <Styles style={{backgroundColor: '#daffdf'}}>
-            <Container style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Styles style={{ color: '#515151'}}>
+            <Container style={{ height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Card style={{ width: '40%' }}>
                     <Form>
                         <Card.Body>

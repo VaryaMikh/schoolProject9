@@ -107,31 +107,30 @@ class FormReg extends Component {
                 <div className="panel panel-default">
                     <FormErrors formErrors={this.state.formErrors} />
                 </div>
-                <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
-                    <label htmlFor="email">Email</label>
+                <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`} style={{marginBottom: '2%'}}>
                     <input type="email" required className="form-control" name="email"
                         placeholder="Email"
                         value={this.state.email}
                         onChange={this.handleUserInput}  />
                 </div>
-                <div className={`form-group ${this.errorClass(this.state.formErrors.password)}`}>
-                    <label htmlFor="password">Пароль</label>
+                <div className={`form-group ${this.errorClass(this.state.formErrors.password)}`} style={{marginBottom: '2%'}}>
                     <input type="password" className="form-control" name="password"
                         placeholder="Пароль"
                         value={this.state.password}
                         onChange={this.handleUserInput}  />
                 </div>
-                <div className={`form-group ${this.errorClass(this.state.formErrors.repeatpassword)}`}>
-                    <label htmlFor="repeatpassword">Повторите пароль</label>
+                <div className={`form-group ${this.errorClass(this.state.formErrors.repeatpassword)}`} style={{marginBottom: '2%'}}>
                     <input type="password" className="form-control" name="repeatpassword"
                         placeholder="Повторите пароль"
                         value={this.state.repeatpassword}
                         onChange={this.handleUserInput}  />
                 </div>
-                {this.state.formValid ? 
-                  <Link to="/datainput"><Button variant="primary">Зарегистрироваться</Button></Link> : 
-                  <Button variant="danger">Зарегистрироваться</Button>}
-                <Link to="/login"><Button variant="primary">Войти</Button></Link>
+                <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                  {this.state.formValid ? 
+                    <Link to="/datainput"><Button style={{backgroundColor: '#33cc33', borderColor: '#33cc33'}}>Зарегистрироваться</Button></Link> : 
+                    <Button style={{backgroundColor: '#ff0000', borderColor: '#ff0000'}}>Зарегистрироваться</Button>}
+                  <Button variant="link"><Link to="/login">Вернуться назад</Link></Button>
+                </div>
             </form>
         </Styles>
     )

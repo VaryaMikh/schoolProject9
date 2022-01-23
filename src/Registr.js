@@ -14,8 +14,8 @@ const Styles = styled.div `
 `
 export const Registr = () => (
     <>
-        <Styles style={{backgroundColor: '#ffdada'}}>
-            <Container style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+        <Styles style={{color: '#515151'}}>
+            <Container style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh'}}>
                 <Card>
                     <Card.Body>
                         <Card.Title>Страница регистрации</Card.Title>

@@ -78,15 +78,13 @@ function FormData(props) {
                 <div className="panel panel-default">
                     <FormErrors formErrors={formErrors} />
                 </div>
-                <div className={`form-group ${errorClass(formErrors.temperature)}`}>
-                    <label htmlFor="temperature">Температура</label>
+                <div className={`form-group ${errorClass(formErrors.temperature)}`} style={{marginBottom: '2%'}}>
                     <input type="temperature" required className="form-control" name="temperature"
                         placeholder="Температура"
                         value={temperature}
                         onChange={handleTemperatureInput}  />
                 </div>
-                <div className={`form-group ${errorClass(formErrors.personState)}`}>
-                    <label htmlFor="personState">Общее состояние</label>
+                <div className={`form-group ${errorClass(formErrors.personState)}`} style={{marginBottom: '2%'}}>
                     <input type="personState" className="form-control" name="personState"
                         placeholder="Общее состояние"
                         value={personState}
@@ -94,8 +92,8 @@ function FormData(props) {
                 </div>
                 
                 {formValid ? 
-                  <Link to="/output"><Button variant="primary">Отправить</Button></Link> :
-                  <Button variant="danger">Отправить</Button>}
+                  <Link to="/output"><Button style={{backgroundColor: '#33cc33', borderColor: '#33cc33'}}>Отправить</Button></Link> :
+                  <Button style={{backgroundColor: '#ff0000', borderColor: '#ff0000'}}>Отправить</Button>}
             </form>
         </Styles>
       )
